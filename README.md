@@ -2,6 +2,8 @@
 
 An elegant MP4 to WebP converter with a modern, animated UI. This desktop application allows you to easily convert video files to the WebP format.
 
+![image](https://github.com/user-attachments/assets/28e8c87c-d569-4bef-9476-0472989b45a5)
+
 ## Features
 
 - Convert MP4 videos to WebP format
