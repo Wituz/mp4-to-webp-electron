@@ -46,12 +46,12 @@
   },
   "dependencies": {
     "@mdi/font": "^7.2.96",
-    "electron-builder": "^24.6.4",
     "ffmpeg-static": "^5.2.0",
     "fluent-ffmpeg": "^2.1.2",
     "sass": "^1.69.5"
   },
   "devDependencies": {
-    "electron": "^25.8.4"
+    "electron": "^25.8.4",
+    "electron-builder": "^24.6.4"
   }
 }
