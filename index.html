@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wituz's WebP Converter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <div class="title-bar">
+      <div class="title">
+        <img src="logo.svg" alt="Logo" class="logo" id="appLogo">
+        <h1>Wituz's WebP Converter</h1>
+      </div>
+      <div class="window-controls">
+        <button class="control minimize" id="minimizeBtn"></button>
+        <button class="control maximize" id="maximizeBtn"></button>
+        <button class="control close" id="closeBtn"></button>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="settings-panel">
+        <h3>Conversion Settings</h3>
+        <div class="setting-group">
+          <label for="quality">Quality:</label>
+          <div class="setting-control">
+            <input type="range" id="quality" min="0" max="100" value="80">
+            <span id="qualityValue">80</span>
+          </div>
+        </div>
+        <div class="setting-group">
+          <label for="lossless">Lossless:</label>
+          <div class="setting-control">
+            <input type="checkbox" id="lossless">
+          </div>
+        </div>
+        <div class="setting-group">
+          <label for="scale">Scale:</label>
+          <div class="setting-control">
+            <input type="range" id="scale" min="1" max="200" value="100">
+            <span id="scaleValue">100%</span>
+          </div>
+        </div>
+        <div class="setting-group" id="dimensionsPreview" style="display: none;">
+          <label>Output Size:</label>
+          <div class="setting-control">
+            <span id="outputDimensions">-</span>
+          </div>
+        </div>
+        <div class="setting-group">
+          <label for="compression">Compression Level:</label>
+          <div class="setting-control">
+            <input type="range" id="compression" min="0" max="6" value="6">
+            <span id="compressionValue">6</span>
+          </div>
+        </div>
+        <div class="setting-group">
+          <label for="preset">Preset:</label>
+          <div class="setting-control">
+            <select id="preset">
+              <option value="default">Default</option>
+              <option value="picture">Picture</option>
+              <option value="photo">Photo</option>
+              <option value="drawing">Drawing</option>
+              <option value="icon">Icon</option>
+              <option value="text">Text</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="drop-zone" id="dropZone">
+        <div class="drop-zone-content">
+          <div class="icon-container">
+            <svg class="drop-icon" width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="currentColor"/>
+            </svg>
+          </div>
+          <p class="drop-text">Drag MP4 files here or <span class="browse-text">browse</span></p>
+        </div>
+      </div>
+
+      <div class="conversion-progress" id="progressContainer" style="display: none;">
+        <div class="current-file">
+          <h3>Converting: <span id="currentFileName">filename.mp4</span></h3>
+          <p>File <span id="currentFileCount">1</span> of <span id="totalFileCount">1</span></p>
+        </div>
+        
+        <div class="progress-bar-container">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+        
+        <div class="progress-percentage">
+          <span id="progressPercentage">0%</span>
+        </div>
+      </div>
+
+      <div class="completion-message" id="completionMessage" style="display: none;">
+        <div class="success-icon">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3>Conversion Complete!</h3>
+        <p>All files have been successfully converted to WebP format</p>
+        <button class="convert-more-btn" id="convertMoreBtn">Convert More</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

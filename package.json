@@ -1,0 +1,57 @@
+{
+  "name": "wituz-webp-converter",
+  "version": "1.0.0",
+  "description": "An elegant MP4 to WebP converter with a modern, animated UI",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "pack": "electron-builder --dir"
+  },
+  "keywords": [
+    "electron",
+    "webp",
+    "converter",
+    "video",
+    "ffmpeg"
+  ],
+  "author": "Wituz",
+  "license": "MIT",
+  "build": {
+    "appId": "com.wituz.webp-converter",
+    "productName": "Wituz's WebP Converter",
+    "mac": {
+      "category": "public.app-category.utilities",
+      "target": ["dmg"],
+      "icon": "build/icon.icns",
+      "identity": null
+    },
+    "win": {
+      "target": ["nsis"],
+      "icon": "build/icon.ico",
+      "sign": null
+    },
+    "linux": {
+      "target": ["AppImage"],
+      "category": "Utility",
+      "icon": "build/icon.png"
+    },
+    "directories": {
+      "buildResources": "build"
+    },
+    "publish": {
+      "provider": "github",
+      "releaseType": "release"
+    }
+  },
+  "dependencies": {
+    "@mdi/font": "^7.2.96",
+    "electron-builder": "^24.6.4",
+    "ffmpeg-static": "^5.2.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "sass": "^1.69.5"
+  },
+  "devDependencies": {
+    "electron": "^25.8.4"
+  }
+}
