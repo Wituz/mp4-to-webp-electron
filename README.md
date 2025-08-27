@@ -13,7 +13,7 @@ An elegant MP4 to WebP converter with a modern, animated UI. This desktop applic
 
 ## Installation
 
-You can download the latest release for your operating system from the [Releases](https://github.com/Wituz/webp-converter/releases) page.
+You can download the latest release for your operating system from the [Releases](https://github.com/Wituz/mp4-to-webp-electron/releases) page.
 
 ### Supported Platforms
 - Windows (.exe installer)
